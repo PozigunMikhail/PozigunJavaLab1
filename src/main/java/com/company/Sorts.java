@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class Sorts {
+public final class Sorts {
+    private Sorts() {
+    }
+
     private static <T> void swap(T[] arr, int idx1, int idx2) {
         T temp = arr[idx1];
         arr[idx1] = arr[idx2];

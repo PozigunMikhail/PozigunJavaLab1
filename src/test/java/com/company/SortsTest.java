@@ -124,10 +124,10 @@ public class SortsTest {
     @Test
     public void gnomeSortDiffSizesTest() throws Exception {
         for (int i = 0; i < 12; i++) {
-            Integer[] arrEvenLen = new Integer[2 * i];
+            Integer[] arrEvenLen = new Integer[2 << i];
             randomIntegersArr(arrEvenLen);
             assertTrue(sortIntegersTest(arrEvenLen, Sorts::gnomeSort));
-            Integer[] arrOddLen = new Integer[2 * i + 1];
+            Integer[] arrOddLen = new Integer[(2 << i) + 1];
             randomIntegersArr(arrOddLen);
             assertTrue(sortIntegersTest(arrOddLen, Sorts::gnomeSort));
         }
@@ -136,10 +136,10 @@ public class SortsTest {
     @Test
     public void mergeSortDiffSizesTest() throws Exception {
         for (int i = 0; i < 12; i++) {
-            Integer[] arrEvenLen = new Integer[2 * i];
+            Integer[] arrEvenLen = new Integer[2 << i];
             randomIntegersArr(arrEvenLen);
             assertTrue(sortIntegersTest(arrEvenLen, Sorts::mergeSort));
-            Integer[] arrOddLen = new Integer[2 * i + 1];
+            Integer[] arrOddLen = new Integer[(2 << i) + 1];
             randomIntegersArr(arrOddLen);
             assertTrue(sortIntegersTest(arrOddLen, Sorts::mergeSort));
         }
